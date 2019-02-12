@@ -1,0 +1,43 @@
+#include <iostream>
+
+using namespace std;
+
+
+void reverseArray(int array[], int first, int last)
+{
+	while (first < last)
+	{
+		int temp = array[first];
+		array[first] = array[last];
+		array[last] = temp;
+		first++;
+		last--;
+	}
+}
+
+
+int main()
+{
+	
+	int arr[5];
+
+	cout << "Enter numbers: " << endl;
+
+	cin >> arr[0];
+	cin >> arr[1];
+	cin >> arr[2];
+	cin >> arr[3];
+	cin >> arr[4];
+
+	reverseArray(arr, 0, 4);
+
+	cout << "Reversed: " << endl;
+
+	for (int i = 0; i <= 4; i++) {
+		cout << arr[i] << " ";
+		cout << endl;
+	}
+
+	system("pause");
+	return 0;
+}
